@@ -1,0 +1,6 @@
+.idea
+.vscode
+.pipeline
+docker
+__pycache__
+venv
