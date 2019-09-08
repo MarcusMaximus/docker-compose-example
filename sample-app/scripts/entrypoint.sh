@@ -3,6 +3,7 @@
 export FLASK_APP=app.py
 
 cd /opt
+. venv/bin/activate
 
 if [ -z "$1" ]; then
     # run flask and listen on 0.0.0.0

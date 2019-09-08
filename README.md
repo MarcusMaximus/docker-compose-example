@@ -19,6 +19,10 @@ High-level: Using automation we want to spin up an environment which will allow 
 
 ## Test Locally
 
+docker rm -vf $(docker ps -a -q)
+docker-compose up
+docker-compose down -v --rmi all --remove-orphans
+
 ### Test Flask app locally
 
 Will fail if DB not running.
