@@ -19,18 +19,19 @@ High-level: Using automation we want to spin up an environment which will allow 
 
 ## Test Locally
 
-docker rm -vf $(docker ps -a -q)
+```bash
 docker-compose up
-docker-compose down -v --rmi all --remove-orphans
+```
 
 ### Test Flask app locally
 
 Will fail if DB not running.
 
 ```bash
+cd sample-app
 python3 -m venv venv
 . venv/bin/activate
-pip3 install -r sample-app/requirements.txt
-export FLASK_APP=sample-app/app.py
+pip3 install -r requirements.txt
+export FLASK_APP=app.py
 flask run --host=0.0.0.0
 ```

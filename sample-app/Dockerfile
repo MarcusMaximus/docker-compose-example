@@ -14,7 +14,7 @@ LABEL buildBaseVersion=$BASE_VERSION
 LABEL maintainer="me@email.tld"
 
 COPY requirements.txt /opt
-COPY app.py /opt
+COPY *.py /opt/
 
 COPY ./scripts /opt
 RUN chmod 755 /opt/*.sh
@@ -23,4 +23,5 @@ RUN /opt/setup-base.sh
 WORKDIR /opt
 EXPOSE 5000
 
+USER johndoe
 ENTRYPOINT ["/opt/entrypoint.sh"]
